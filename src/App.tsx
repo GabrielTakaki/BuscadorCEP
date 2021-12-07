@@ -1,6 +1,6 @@
 import React from 'react';
-import Provider from './context/provider';
 import Home from './pages/Home';
+import Provider from './context/provider';
 import FindByZip from './pages/FindByZip';
 import FindByAddress from './pages/FindByAddress';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
