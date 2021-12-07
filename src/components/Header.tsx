@@ -5,20 +5,20 @@ import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <section className="section-links">
+      <section className="header__section">
         <Link className="link" to="/">
           <img className="img-logo" src={ efrete } alt="e-frete logo" />
         </Link>
-        <nav className="nav-links">
-        <button className="link-btn">
-            <Link className="link" to="/">Página inicial</Link>
-          </button>
-          <button className="link-btn">
-            <Link className="link" to="/findByZip">Procurar por CEP</Link>
-          </button>
-          <button className="link-btn">
-            <Link className="link" to="/findByAddress">Procurar por endereço</Link>
-          </button>
+        <nav className="header__nav">
+          <Link to="/" className="link">
+            <button className="header__btn">Página inicial</button>
+          </Link>
+          <Link to="/findByZip" className="link">
+            <button className="header__btn">Procurar por CEP</button>
+          </Link>
+          <Link to="/findByAddress" className="link">
+            <button className="header__btn">Procurar por endereço</button>
+          </Link>
         </nav>
       </section>
     </header>

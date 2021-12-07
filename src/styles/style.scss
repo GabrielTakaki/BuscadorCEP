@@ -1,9 +1,11 @@
 @import './components/Header';
 @import './components/Footer';
 @import './components/AddressCard';
+@import './components/AddressTable';
 
 @import './pages/Home';
 @import './pages/FindByZip';
+@import './pages/FindByAddress';
 
 body {
   background-color: #f6f6f6;

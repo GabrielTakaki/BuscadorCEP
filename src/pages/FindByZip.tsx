@@ -26,7 +26,7 @@ const FindByZip: React.FC = () => {
       }
     }
     validateCep();
-  }, [getInput]);
+  }, [getInput, findByZip]);
 
   return (
     <>
@@ -34,9 +34,9 @@ const FindByZip: React.FC = () => {
       <div className="container">
         <Label
           id="cep"
+          name="cep"
           value={ cep }
           onChange={ (e) => setCep(e.target.value) }
-          name="cep"
           type="number"
           text="Pesquise por CEP:"
           className="cep-input"
@@ -52,7 +52,7 @@ const FindByZip: React.FC = () => {
       {getCep.length > 0 && getCep.map((item, index) => 
         <AddressCard
           key={ item.cep }
-          zip={ item.cep }
+          state={ item.uf }
           patio={ item.logradouro }
           neighborhood={ item.bairro }
           city={ item.localidade }

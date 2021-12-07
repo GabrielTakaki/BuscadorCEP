@@ -1,5 +1,5 @@
 export interface ZipResult {
-  cep: string;
+  cep?: string;
   logradouro: string;
   bairro: string;
   localidade: string;
@@ -14,9 +14,10 @@ export interface ZipResult {
 export interface AddressCardProps {
   patio: string;
   city: string;
-  neighborhood: string;
-  zip: string;
+  neighborhood?: string;
+  zip?: string;
   key?: string;
+  state?: string;
 }
 
 export interface ButtonProps {
@@ -44,4 +45,9 @@ export interface LabelProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   type: string;
+}
+
+export interface SelectProps {
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
