@@ -20,8 +20,8 @@ const FindByZip: React.FC = () => {
       // global.alert('Cep inválido, digite apenas números');
       return setZipValid(true);
     }
-    return setZipValid(false);
     setCep('');
+    return setZipValid(false);
   }
 
   useEffect(() => {
