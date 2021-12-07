@@ -1,0 +1,21 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  .icons-section {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eaeaea;
+
+    a {
+      margin: 10px;
+      color: black;
+    }
+  }
+
+
+  .copyright {
+    text-align: center;
+  }
+}

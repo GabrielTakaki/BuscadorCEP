@@ -1,0 +1,10 @@
+@import './components/header';
+@import './components/footer';
+
+@import './pages/home';
+@import './pages/FindByZip';
+
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+}
