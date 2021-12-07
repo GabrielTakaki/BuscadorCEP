@@ -6,15 +6,14 @@ import Button from '../components/Button';
 import { ZipResult } from '../interfaces';
 import myContext from '../context/myContext';
 import StatesSelect from '../components/StateSelect';
-// import AddressTable from '../components/AddressTable';
 
 const FindByAddress: React.FC = () => {
   const [city, setCity] = useState('');
-  const [state, setState] = useState('AC');
   const [street, setStreet] = useState('');
+  const [state, setState] = useState('AC');
   const [clicked, setClicked] = useState(false);
-  const [search, setSearch] = useState<ZipResult[]>([]);
   const { findByAddress } = useContext(myContext);
+  const [search, setSearch] = useState<ZipResult[]>([]);
 
   const handleClick = () => {
     setClicked(true);
@@ -58,6 +57,7 @@ const FindByAddress: React.FC = () => {
           text="Rua:"
           className="street-input"
         />
+        
         <Button
           text="Buscar"
           classNameDiv="btn-div"
