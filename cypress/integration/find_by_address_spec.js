@@ -40,4 +40,10 @@ describe('Teste da tela de address. Verifica se existe os inputs e buttons, e se
     cy.visit('http://localhost:3000/findByAddress');
     cy.get('header').should('be.visible');
   });
+
+  it('Verifica se retorna alert ao inserir CEP invalido', () => {
+    cy.visit('http://localhost:3000/findByAddress');
+    cy.get('.btn').click();
+    cy.get('.valid-msg').should('have.text', 'Todos os campos são obrigatórios');
+  });
 });

@@ -10,12 +10,17 @@ import AddressCard from '../components/AddressCard';
 const FindByZip: React.FC = () => {
   const [cep, setCep] = useState('');
   const [getInput, setGetInput] = useState('');
+  const [zipValid, setZipValid] = useState(false);
   const [getCep, setGetCep] = useState<ZipResult[]>([]);
   const { findByZip } = useContext(myContext);
 
   const handleClick = () => {
     setGetInput(cep);
+    if (cep.length < 8) {
+      return setZipValid(true);
+    }
     setCep('');
+    return setZipValid(false);
   }
 
   useEffect(() => {
@@ -40,6 +45,7 @@ const FindByZip: React.FC = () => {
           type="number"
           text="Pesquise por CEP:"
         />
+        { zipValid ? <p style={{ margin: '200px, auto' }} className="valid-msg">CEP inválido</p> : '' }
         <Button
           id="cep-button"
           text="Buscar"

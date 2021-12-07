@@ -28,6 +28,13 @@
     }
   }
 
+  .valid-msg {
+    margin: auto;
+    margin-top: 15px;
+    font-size: .8rem;
+    color: red;
+  }
+
   .label {
     @include flexColumn();
     margin: 5px;

@@ -207,6 +207,13 @@
           transform: scale(0.98);
 }
 
+.container .valid-msg {
+  margin: auto;
+  margin-top: 15px;
+  font-size: .8rem;
+  color: red;
+}
+
 .container .label {
   display: -webkit-box;
   display: -ms-flexbox;
