@@ -1,11 +1,11 @@
 import React from 'react';
 import { ButtonProps } from '../interfaces';
 
-const Button: React.FC<ButtonProps> = ({ text, onClick, classNameDiv, classNameButton, id }) => {
+const Button: React.FC<ButtonProps> = ({ text, onClick, id }) => {
   return (
-    <div className={ classNameDiv }>
-      <button className={ classNameButton } onClick={ onClick } id={ id }>{ text }</button>
-    </div>
+    // <div className="">
+      <button className="btn" onClick={ onClick } id={ id }>{ text }</button>
+    // </div>
   );
 }
 

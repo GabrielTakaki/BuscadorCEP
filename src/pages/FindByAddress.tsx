@@ -46,7 +46,7 @@ const FindByAddress: React.FC = () => {
           onChange={ (e) => setCity(e.target.value) }
           type="text"
           text="Cidade:"
-          className="city-input"
+          placeholder="Rio Branco"
         />
         <Label
           type="text"
@@ -55,7 +55,7 @@ const FindByAddress: React.FC = () => {
           value={ street }
           onChange={ (e) => setStreet(e.target.value) }
           text="Rua:"
-          className="street-input"
+          placeholder="Rua João Paulo"
         />
         
         <Button

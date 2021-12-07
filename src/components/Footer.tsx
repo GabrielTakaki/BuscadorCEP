@@ -4,11 +4,11 @@ import { AiOutlineGithub, AiOutlineLinkedin } from 'react-icons/ai';
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
-      <section className="icons-section">
-        <a href="https://github.com/GabrielTakaki" rel="noreferrer" target="_blank">
+      <section className="footer__section">
+        <a id="github-link" href="https://github.com/GabrielTakaki" rel="noreferrer" target="_blank">
           <AiOutlineGithub size={ 25 } />
         </a>
-        <a href="https://www.linkedin.com/in/gabriel-takaki-junkes-ab5591205/" rel="noreferrer" target="_blank">
+        <a id="linkedin-link" href="https://www.linkedin.com/in/gabriel-takaki-junkes-ab5591205/" rel="noreferrer" target="_blank">
           <AiOutlineLinkedin size={ 25 } />
         </a>
       </section>

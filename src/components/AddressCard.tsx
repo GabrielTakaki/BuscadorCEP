@@ -6,19 +6,19 @@ const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, ke
     <div className="address" key={ key }>
       <section className="address__section">
         <h5 className="address__header">Logradouro</h5>
-        <p>{ patio }</p>
+        <p id="patio">{ patio }</p>
       </section>
       <section className="address__section">
         <h5 className="address__header">Bairro</h5>
-        <p>{ neighborhood }</p>
+        <p id="neighborhood">{ neighborhood }</p>
       </section>
       <section className="address__section">
         <h5 className="address__header">Cidade</h5>
-        <p>{ city }</p>
+        <p id="city">{ city }</p>
       </section>
       <section className="address__section">
         <h5 className="address__header">Estado</h5>
-        <p>{ state }</p>
+        <p id="state">{ state }</p>
       </section>
     </div>
   )
