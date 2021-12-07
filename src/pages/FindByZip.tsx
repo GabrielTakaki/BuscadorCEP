@@ -2,22 +2,10 @@ import React, { useState, useContext, useEffect } from 'react';
 import Label from '../components/Label';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { ZipResult } from '../interfaces';
 import Button from '../components/Button';
 import myContext from '../context/myContext';
 import AddressCard from '../components/AddressCard';
-
-type ZipResult = {
-  cep: string;
-  logradouro: string;
-  bairro: string;
-  localidade: string;
-  complemento?: string;
-  uf?: string;
-  ibge?: string;
-  gia?: string;
-  ddd?: string;
-  siafi?: string;
-}
 
 const FindByZip: React.FC = () => {
   const [cep, setCep] = useState('');
@@ -49,6 +37,7 @@ const FindByZip: React.FC = () => {
           value={ cep }
           onChange={ (e) => setCep(e.target.value) }
           name="cep"
+          type="number"
           text="Pesquise por CEP:"
           className="cep-input"
         />

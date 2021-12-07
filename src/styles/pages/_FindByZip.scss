@@ -5,10 +5,8 @@
 
 .container {
   @include flexColumn();
-  justify-content: center;
-  margin-top: 190px;
   max-width: 760px;
-  // width: 80%;
+  margin: 190px auto;
 
   .btn-div {
     align-self: center;
@@ -57,8 +55,4 @@
       padding-left: 10px;
     }
   }
-
-  // &:hover {
-  //   background-color: yellow;
-  // }
 }

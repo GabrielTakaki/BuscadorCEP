@@ -1,9 +1,5 @@
 import React from 'react';
-
-interface DefaultValue {
-  findByZip: (zip: string) => void;
-  findByAddress: (street: string, city: string, state: string) => void;
-}
+import { DefaultValue } from '../interfaces'
 
 const defaultsState = {
   findByZip: (zip: string) => {},

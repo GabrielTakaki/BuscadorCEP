@@ -1,7 +1,8 @@
-@import './components/header';
-@import './components/footer';
+@import './components/Header';
+@import './components/Footer';
+@import './components/AddressCard';
 
-@import './pages/home';
+@import './pages/Home';
 @import './pages/FindByZip';
 
 body {

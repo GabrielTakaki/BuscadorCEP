@@ -1,31 +1,23 @@
 import React from 'react';
+import { AddressCardProps } from '../interfaces';
 
-interface AddressCardProps {
-  patio: string;
-  className?: string;
-  city: string;
-  neighborhood: string;
-  zip: string;
-  key: string;
-}
-
-const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, zip, className }) => {
+const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, zip, key }) => {
   return (
-    <div className={ className }>
-      <section>
-        <h5>Logradouro</h5>
+    <div className="address" key={ key }>
+      <section className="address__section">
+        <h5 className="address__header">Logradouro</h5>
         <p>{ patio }</p>
       </section>
-      <section>
-        <h5>Bairro</h5>
+      <section className="address__section">
+        <h5 className="address__header">Bairro</h5>
         <p>{ neighborhood }</p>
       </section>
-      <section>
-        <h5>Cidade</h5>
+      <section className="address__section">
+        <h5 className="address__header">Cidade</h5>
         <p>{ city }</p>
       </section>
-      <section >
-        <h5>CEP</h5>
+      <section className="address__section">
+        <h5 className="address__header">CEP</h5>
         <p>{ zip }</p>
       </section>
     </div>
