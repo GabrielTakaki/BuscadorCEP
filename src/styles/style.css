@@ -79,6 +79,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #f6f6f6;
 }
 
 .footer .icons-section {
@@ -131,11 +132,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 190px;
   max-width: 760px;
+  margin: 190px 0 auto;
 }
 
 .container .btn-div {
