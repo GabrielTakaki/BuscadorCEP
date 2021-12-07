@@ -8,7 +8,7 @@ interface Props {
 
 const RecipesProvider: React.FC<Props> = ({ children }) => {
 
-  const findAddress = async (zip: number) => {
+  const findByZip = async (zip: string) => {
     try {
       const response = await fetch(`https://viacep.com.br/ws/${zip}/json/`);
       const data = await response.json();
@@ -18,7 +18,7 @@ const RecipesProvider: React.FC<Props> = ({ children }) => {
     }
   }
 
-  const findZip = async (state: string, city: string, street: string) => {
+  const findByAddress = async (state: string, city: string, street: string) => {
     try {
       const response = await fetch(`https://viacep.com.br/ws/${state}/${city}%20/${street}/json/`);
       const data = await response.json();
@@ -29,8 +29,8 @@ const RecipesProvider: React.FC<Props> = ({ children }) => {
   }
 
   const providerState = {
-    findAddress,
-    findZip,
+    findByZip,
+    findByAddress,
   };
 
   return (

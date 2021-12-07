@@ -6,9 +6,10 @@ interface LabelProps {
   value: string;
   name: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
 }
 
-const Label: React.FC<LabelProps> = ({ id, text, value, name, onChange }) => {
+const Label: React.FC<LabelProps> = ({ id, text, value, name, onChange, className }) => {
   return (
     <label htmlFor={ id }>
       <p>{ text }</p>
@@ -18,6 +19,7 @@ const Label: React.FC<LabelProps> = ({ id, text, value, name, onChange }) => {
         onChange={ onChange }
         value={ value }
         name={ name }
+        className={ className }
       />
     </label>
   );

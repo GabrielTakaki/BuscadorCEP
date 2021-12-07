@@ -1,10 +1,15 @@
 import React from 'react';
 
 interface DefaultValue {
-  findAddress: (zip: number) => void;
-  findZip: (street: string, city: string, state: string) => void;
+  findByZip: (zip: string) => void;
+  findByAddress: (street: string, city: string, state: string) => void;
 }
 
-const myContext = React.createContext<DefaultValue | undefined>(undefined);
+const defaultsState = {
+  findByZip: (zip: string) => {},
+  findByAddress: (street: string, city: string, state: string) => {},
+}
+
+const myContext = React.createContext<DefaultValue>(defaultsState);
 
 export default myContext;

@@ -2,10 +2,11 @@ import React from 'react';
 
 interface AddressCardProps {
   patio: string;
-  className: string;
+  className?: string;
   city: string;
   neighborhood: string;
   zip: string;
+  key: string;
 }
 
 const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, zip, className }) => {
