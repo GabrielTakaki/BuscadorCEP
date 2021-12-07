@@ -26,7 +26,7 @@ describe('Teste da tela de address. Verifica se existe os inputs e buttons, e se
     cy.get('#state').select('SC');
     cy.get('#city').type('Balneário Camboriú');
     cy.get('#street').type('João Jorge Pio');
-    cy.get('.btn-el').click();
+    cy.get('.btn').click();
     findCep.forEach((cep, index) => {
       cy.get(`[data-testid="cep-${index}"]`).should('be.visible');
     })
