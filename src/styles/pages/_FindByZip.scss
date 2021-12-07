@@ -8,45 +8,36 @@
   max-width: 760px;
   margin: 190px auto;
 
-  .btn-div {
+  .btn {
+    background-color: rgb(21, 131, 233);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    width: 80px;
     align-self: center;
-    margin: 15px 0;
-
-    .btn-el {
-      background-color: rgb(21, 131, 233);
-      border: 1px solid black;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  }
-
-  .btn-link {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    .btn-el-address {
-      background-color: rgb(21, 131, 233);
-      border: 1px solid black;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  }
+    border-radius: 5px;
+    cursor: pointer;
   
+    &:hover {
+      background-color: rgba(21, 131, 233, 0.8);
+    }
 
-  label, .div-select {
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  .label {
     @include flexColumn();
     margin: 5px;
 
     p {
       align-self: flex-start;
-      opacity: 0.6;
+      // opacity: 0.6;
     }
   
-    input, select {
+    .label__input, .label__select {
       background-color: white;
       border: 1px solid #ccc;
       border-radius: 10px;

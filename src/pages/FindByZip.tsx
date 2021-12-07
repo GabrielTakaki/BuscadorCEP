@@ -39,7 +39,6 @@ const FindByZip: React.FC = () => {
           onChange={ (e) => setCep(e.target.value) }
           type="number"
           text="Pesquise por CEP:"
-          className="cep-input"
         />
         <Button
           id="cep-button"

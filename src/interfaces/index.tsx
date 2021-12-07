@@ -45,6 +45,7 @@ export interface LabelProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   type: string;
+  placeholder?: string;
 }
 
 export interface SelectProps {
