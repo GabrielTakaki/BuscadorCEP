@@ -79,7 +79,7 @@
   background-color: #f6f6f6;
 }
 
-.footer .icons-section {
+.footer .footer__section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +89,7 @@
   border-top: 1px solid #eaeaea;
 }
 
-.footer .icons-section a {
+.footer .footer__section a {
   margin: 10px;
   color: black;
 }
