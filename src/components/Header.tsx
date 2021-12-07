@@ -10,13 +10,13 @@ const Header: React.FC = () => {
           <img className="img-logo" src={ efrete } alt="e-frete logo" />
         </Link>
         <nav className="header__nav">
-          <Link to="/" className="link">
+          <Link id="home-link" to="/" className="link">
             <button className="header__btn">Página inicial</button>
           </Link>
-          <Link to="/findByZip" className="link">
+          <Link id="zip-link" to="/findByZip" className="link">
             <button className="header__btn">Procurar por CEP</button>
           </Link>
-          <Link to="/findByAddress" className="link">
+          <Link id="address-link" to="/findByAddress" className="link">
             <button className="header__btn">Procurar por endereço</button>
           </Link>
         </nav>
