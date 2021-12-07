@@ -17,7 +17,6 @@ const FindByZip: React.FC = () => {
   const handleClick = () => {
     setGetInput(cep);
     if (cep.length < 8) {
-      // global.alert('Cep inválido, digite apenas números');
       return setZipValid(true);
     }
     setCep('');

@@ -13,10 +13,15 @@ const FindByAddress: React.FC = () => {
   const [state, setState] = useState('AC');
   const [clicked, setClicked] = useState(false);
   const { findByAddress } = useContext(myContext);
+  const [validAddres, setValidAddress] = useState(false);
   const [search, setSearch] = useState<ZipResult[]>([]);
 
   const handleClick = () => {
+    if (!city || !street) {
+      return setValidAddress(true);
+    }
     setClicked(true);
+    return setValidAddress(false);
   }
 
   useEffect(() => {
@@ -57,7 +62,7 @@ const FindByAddress: React.FC = () => {
           text="Rua:"
           placeholder="Rua João Paulo"
         />
-        
+        { validAddres ? <p className="valid-msg">Todos os campos são obrigatórios</p> : '' }
         <Button
           text="Buscar"
           classNameDiv="btn-div"
