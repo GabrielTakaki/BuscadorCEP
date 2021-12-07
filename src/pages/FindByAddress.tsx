@@ -6,6 +6,7 @@ import Button from '../components/Button';
 import { ZipResult } from '../interfaces';
 import myContext from '../context/myContext';
 import StatesSelect from '../components/StateSelect';
+// import AddressTable from '../components/AddressTable';
 
 const FindByAddress: React.FC = () => {
   const [city, setCity] = useState('');
@@ -34,7 +35,7 @@ const FindByAddress: React.FC = () => {
   return (
     <>
       <Header />
-      <div className="cep-form">
+      <div className="container">
         <StatesSelect
           onChange={ (e) => setState(e.target.value) }
           value={ state }
@@ -43,8 +44,8 @@ const FindByAddress: React.FC = () => {
           id="city"
           name="city"
           value={ city }
-          type="text"
           onChange={ (e) => setCity(e.target.value) }
+          type="text"
           text="Cidade:"
           className="city-input"
         />
@@ -64,14 +65,14 @@ const FindByAddress: React.FC = () => {
           onClick={ handleClick }
         />
       </div>
-      <table className="address-table">
-        <tbody>
-          <tr className="table-header">
+      <table className="table">
+        <tbody className="table__body">
+          <tr className="table__header">
             <th>CEP</th>
             <th>Logradouro</th>
           </tr>
           {search && search.map((item, index) => 
-            <tr className="table-header" data-testid={ `cep-${index}` } key={ item.logradouro }>
+            <tr className="table__header" data-testid={ `cep-${index}` } key={ item.cep }>
               <td>{ item.cep }</td>
               <td>{ item.logradouro }</td>
             </tr>

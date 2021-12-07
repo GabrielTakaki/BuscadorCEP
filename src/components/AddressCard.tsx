@@ -1,7 +1,7 @@
 import React from 'react';
 import { AddressCardProps } from '../interfaces';
 
-const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, zip, key }) => {
+const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, key, state }) => {
   return (
     <div className="address" key={ key }>
       <section className="address__section">
@@ -17,8 +17,8 @@ const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, zi
         <p>{ city }</p>
       </section>
       <section className="address__section">
-        <h5 className="address__header">CEP</h5>
-        <p>{ zip }</p>
+        <h5 className="address__header">Estado</h5>
+        <p>{ state }</p>
       </section>
     </div>
   )

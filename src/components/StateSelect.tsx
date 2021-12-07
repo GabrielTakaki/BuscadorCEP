@@ -3,9 +3,9 @@ import { SelectProps } from '../interfaces';
 
 const StatesSelect: React.FC<SelectProps> = ({ onChange, value }) => {
   return (
-    <div className="container">
+    <label htmlFor="state" className="label">
       <p>Estado:</p>
-      <select className="container__select" id="state" name="state" onChange={ onChange } value={ value }>
+      <select className="label__select" id="state" name="state" onChange={ onChange } value={ value }>
         <option value="AC">Acre</option>
         <option value="AL">Alagoas</option>
         <option value="AP">Amapá</option>
@@ -34,7 +34,7 @@ const StatesSelect: React.FC<SelectProps> = ({ onChange, value }) => {
         <option value="SE">Sergipe</option>
         <option value="TO">Tocantins</option>
       </select>
-    </div>
+    </label>
   );
 }
 

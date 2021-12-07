@@ -1,5 +1,5 @@
 export interface ZipResult {
-  cep: string;
+  cep?: string;
   logradouro: string;
   bairro: string;
   localidade: string;
@@ -14,9 +14,10 @@ export interface ZipResult {
 export interface AddressCardProps {
   patio: string;
   city: string;
-  neighborhood: string;
-  zip: string;
+  neighborhood?: string;
+  zip?: string;
   key?: string;
+  state?: string;
 }
 
 export interface ButtonProps {
