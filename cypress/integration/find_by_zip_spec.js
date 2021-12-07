@@ -26,7 +26,7 @@ describe('Tem os elementos corretos na tela', () => {
     cy.get('#patio').should('be.visible');
     cy.get('#city').should('be.visible');
     cy.get('#neighborhood').should('be.visible');
-    cy.get('#state').should('be.visible');
+    cy.get('#state').should('be.visible');;
   });
 
   it('Verifica se o footer está presente na tela', () => {
@@ -38,4 +38,11 @@ describe('Tem os elementos corretos na tela', () => {
     cy.visit('http://localhost:3000/findByZip');
     cy.get('header').should('be.visible');
   });
+
+  it('Verifica se retorna alert ao inserir CEP invalido', () => {
+    cy.visit('http://localhost:3000/findByZip');
+    cy.get('#cep').type(883350);
+    cy.get('#cep-button').click();
+    cy.get('.valid-msg').should('have.text', 'CEP inválido');
+  })
 });
