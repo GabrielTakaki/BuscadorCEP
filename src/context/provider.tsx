@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import myContext from './myContext';
-
-interface Props {
-  children: React.ReactNode;
-}
+import { Props } from '../interfaces';
 
 const RecipesProvider: React.FC<Props> = ({ children }) => {
 
