@@ -6,7 +6,7 @@
 .container {
   @include flexColumn();
   max-width: 760px;
-  margin: 190px 0 auto;
+  margin: 190px auto;
 
   .btn-div {
     align-self: center;

@@ -13,11 +13,10 @@ export interface ZipResult {
 
 export interface AddressCardProps {
   patio: string;
-  className?: string;
   city: string;
   neighborhood: string;
   zip: string;
-  key: string;
+  key?: string;
 }
 
 export interface ButtonProps {
