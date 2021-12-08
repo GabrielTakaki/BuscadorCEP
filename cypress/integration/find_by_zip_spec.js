@@ -15,6 +15,7 @@ describe('Tem os elementos corretos na tela', () => {
   });
 
   it('Se retorna o endereco do CEP informado, apresentado', () => {
+    // A spy gives you the ability to "spy" on a function, by letting you capture and then assert that the function was called with the right arguments
     cy.visit('http://localhost:3000/findByZip', {
       onBeforeLoad(win) {
         cy.spy(win, 'fetch');
@@ -23,15 +24,15 @@ describe('Tem os elementos corretos na tela', () => {
   
     cy.get('#cep').type(88334150);
     cy.get('#cep-button').click();
-  
-    cy.window()
-      .its('fetch')
-      .should('be.calledWith', 'https://viacep.com.br/ws/88334150/json/');
+
+    findAddress.forEach((_cep, index) => {
+      cy.get(`[id="address-${index}"]`).should('be.visible');
+    });
 
     cy.get('#patio').should('be.visible');
     cy.get('#city').should('be.visible');
     cy.get('#neighborhood').should('be.visible');
-    cy.get('#state').should('be.visible');;
+    cy.get('#state').should('be.visible');
   });
 
   it('Verifica se o footer está presente na tela', () => {
