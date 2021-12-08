@@ -61,7 +61,7 @@ const FindByZip: React.FC = () => {
           patio={ item.logradouro }
           neighborhood={ item.bairro }
           city={ item.localidade }
-          data-testid={ `address-${index}` }
+          id={ `address-${index}` }
         />
       )}
       <Footer />

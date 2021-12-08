@@ -18,6 +18,7 @@ export interface AddressCardProps {
   zip?: string;
   keyProp?: string;
   state?: string;
+  id: string;
 }
 
 export interface ButtonProps {

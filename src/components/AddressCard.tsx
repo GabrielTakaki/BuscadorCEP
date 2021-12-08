@@ -1,9 +1,9 @@
 import React from 'react';
 import { AddressCardProps } from '../interfaces';
 
-const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, keyProp, state }) => {
+const AddressCard: React.FC<AddressCardProps> = ({ patio, neighborhood, city, keyProp, state, id }) => {
   return (
-    <div className="address" key={ keyProp }>
+    <div className="address" key={ keyProp } id={ id }>
       <section className="address__section">
         <h5 className="address__header">Logradouro</h5>
         <p id="patio">{ patio }</p>
