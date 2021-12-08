@@ -1,0 +1,12 @@
+@import './components/Header';
+@import './components/Footer';
+@import './components/AddressCard';
+@import './components/AddressTable';
+
+@import './pages/Home';
+@import './pages/FindByZip';
+
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+}

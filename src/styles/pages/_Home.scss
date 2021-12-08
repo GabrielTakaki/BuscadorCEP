@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 190px calc(17% + 5px);
+
+  .main__title {
+    text-align: center;
+  }
+
+  .main__text {
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+}
