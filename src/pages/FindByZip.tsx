@@ -56,7 +56,7 @@ const FindByZip: React.FC = () => {
       </div>
       {getCep.length > 0 && getCep.map((item, index) => 
         <AddressCard
-          key={ item.cep }
+          keyProp={ item.cep }
           state={ item.uf }
           patio={ item.logradouro }
           neighborhood={ item.bairro }

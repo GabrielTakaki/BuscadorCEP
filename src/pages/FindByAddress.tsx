@@ -78,8 +78,8 @@ const FindByAddress: React.FC = () => {
           </tr>
           {search && search.map((item, index) => 
             <tr className="table__header" data-testid={ `cep-${index}` } key={ item.cep }>
-              <td>{ item.cep }</td>
-              <td>{ item.logradouro }</td>
+              <td id="zip-td">{ item.cep }</td>
+              <td id="patio-td">{ item.logradouro }</td>
             </tr>
           )}
         </tbody>

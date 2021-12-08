@@ -1,3 +1,6 @@
+const fetchMock = require('../mocks/fetch');
+const findAddress = require('../mocks/findAddress');
+
 describe('Tem os elementos corretos na tela', () => {
   it('Tem o input', () => {
     cy.visit('http://localhost:3000/findByZip');
@@ -17,8 +20,10 @@ describe('Tem os elementos corretos na tela', () => {
         cy.spy(win, 'fetch');
       },
     });
+  
     cy.get('#cep').type(88334150);
     cy.get('#cep-button').click();
+  
     cy.window()
       .its('fetch')
       .should('be.calledWith', 'https://viacep.com.br/ws/88334150/json/');

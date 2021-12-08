@@ -16,7 +16,7 @@ export interface AddressCardProps {
   city: string;
   neighborhood?: string;
   zip?: string;
-  key?: string;
+  keyProp?: string;
   state?: string;
 }
 
