@@ -8,15 +8,13 @@
 1. Clone o repositório
   * `git@github.com:GabrielTakaki/BuscadorCEP.git`
   * Entre na pasta do repositório que você acabou de clonar:
-    * `BuscadorCEP`
+    * `cd BuscadorCEP`
 
 2. Instale as dependências e inicialize o projeto
   * Instale as dependências:
     * `npm install`
   * Inicialize o projeto:
     * `npm start`
-
----
 
 # Ou acesse através deste link:
 
