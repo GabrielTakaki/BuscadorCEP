@@ -14,8 +14,6 @@ describe('Teste da tela de address. Verifica se existe os inputs e buttons, e se
     cy.visit('http://localhost:3000/findByAddress');
 
     cy.get('.table').should('be.visible');
-
-
   });
   it('Se com as informaçoes passadas, retorna o CEP e o Logradouro.', () => {
     cy.visit('http://localhost:3000/findByAddress', {
@@ -29,7 +27,7 @@ describe('Teste da tela de address. Verifica se existe os inputs e buttons, e se
     cy.get('.btn').click();
     findCep.forEach((cep, index) => {
       cy.get(`[data-testid="cep-${index}"]`).should('be.visible');
-    })
+    });
   });
   it('Verifica se o footer está presente na tela', () => {
     cy.visit('http://localhost:3000/findByAddress');
