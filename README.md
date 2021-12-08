@@ -28,3 +28,10 @@
 1. Realize todo o passo a passo de como rodar o projeto.
 2. Rode os testes:
   * `npm run cy:open`
+
+
+# E rodar os testes e2e
+
+1. Rode os testes com `npm run cy:open`.
+2. Execute o seguinte comando:
+ * `npx nyc report --reporter=text`
