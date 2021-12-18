@@ -6,7 +6,7 @@
 # Intruções para rodar o projeto  :pencil:
 
 1. Clone o repositório
-  * `git@github.com:GabrielTakaki/BuscadorCEP.git`
+  * `git@github.com:gabrieltakaki/BuscadorCEP.git`
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd BuscadorCEP`
 
